@@ -11,7 +11,6 @@ const pool = mysql.createPool({
   queueLimit: 0
 });
 
-// Test the connection
 pool.getConnection((err, connection) => {
   if (err) {
     console.error("DB Connection Failed");
@@ -23,4 +22,4 @@ pool.getConnection((err, connection) => {
   connection.release();
 });
 
-module.exports = pool.promise();
+module.exports = pool;
