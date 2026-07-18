@@ -31,7 +31,7 @@ spec:
         - secretRef:
             name: b-secret
         - configMapRef:
-            name: b-config 
+            name: backend-config 
 
         livenessProbe:
           httpGet:
